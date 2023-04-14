@@ -1,0 +1,6 @@
+---
+
+- name: Ensure evince is installed
+  ansible.builtin.package:
+    name: evince
+    state: present

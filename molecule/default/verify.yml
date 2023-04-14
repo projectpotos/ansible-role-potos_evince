@@ -1,0 +1,16 @@
+---
+
+- name: Verify
+  hosts: all
+  gather_facts: no
+
+  tasks:
+    - name: check if package has been installed
+      ansible.builtin.command: dpkg-query -l evince
+      register: package_check
+      failed_when: false
+
+    - name: check if template has been applied
+      ansible.builtin.command: evince --version
+      register: package_check
+      failed_when: false
