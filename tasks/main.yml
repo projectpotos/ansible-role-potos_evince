@@ -3,4 +3,4 @@
 - name: Ensure evince is installed
   ansible.builtin.package:
     name: evince
-    state: present
+    state: "{{ potos_evince_enforce_latest | ternary('latest', 'present') }}"

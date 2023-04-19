@@ -4,3 +4,9 @@ argument_specs:
   main:
     short_description: Role to install Evince on Potos Linux Clients.
     options:
+      potos_evince_enforce_latest:
+        description:
+          - If Evince package should be always updated to the latest version (else just ensure Evince is present)
+        type: bool
+        required: no
+        default: false
